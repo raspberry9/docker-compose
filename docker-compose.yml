@@ -2,6 +2,7 @@ version: '2'
 services:
   mysql:
     image: mariadb:latest
+    restart: always
     ports:
       - "3306:3306"
     environment:
@@ -13,6 +14,7 @@ services:
 
   redis:
     image: redis:latest
+    restart: always
     ports:
       - "6379:6379"
     volumes:
@@ -79,7 +81,7 @@ services:
     ports:
       - "5601:5601"
     environment:
-      SERVER_NAME: 172.17.0.1
+      SERVER_NAME: dev.fruit.team
       ELASTICSEARCH_URL: http://172.17.0.1:9200
     networks:
       - elk

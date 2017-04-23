@@ -1,3 +1,7 @@
 *.log
 *.swp
 *.tmp
+mysql/data
+mysql/log
+redis/data
+redis/log
